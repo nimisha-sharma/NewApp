@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="fb8df3e3-dc93-4fd3-9972-2e01994482d2" AssemblyVersion="14.0.23107.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="fd1dac89-4d76-494a-a5c5-0ddff2555504" AssemblyVersion="14.0.23107.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.11.9600.18538" WarningLevel="1" />
@@ -45,7 +45,7 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="25" Y="14" />
+      <Location X="25" Y="13" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Right</MouseButton>
@@ -54,14 +54,14 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="135" Y="9" />
+      <Location X="134" Y="10" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UINavigationToolbarToolBar.UIItemComboBox">
       <ParameterName />
-      <Value Encoded="false">http://localhost:11259/</Value>
+      <Value Encoded="false">http://localhost:11259</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -71,47 +71,38 @@
       <IsGlobalHotkey>false</IsGlobalHotkey>
       <Text Encoded="false">{Enter}</Text>
     </SendKeysAction>
-    <ErrorAction>
-      <ContinueOnError>True</ContinueOnError>
-      <ParameterName />
-      <Message>Element not available</Message>
-    </ErrorAction>
-    <MouseAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UILearnHyperlink.UILearnEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="15" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
     <MouseAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UILearnmoreHyperlink.UILearnmoreEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="38" Y="8" />
+      <Location X="82" Y="16" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UIFreeCoursesTheASPNETApplication.UIItemPropertyPage">
+    <MouseAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UILearnHyperlink.UILearnEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="1345" Y="12" />
+      <Location X="16" Y="12" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIProgramManagerWindow.UIFolderViewWindow.UIDesktopList">
+    <MouseAction UIObjectName="UIMap.UIMozillaFirefoxStartPWindow.UILearnmoreHyperlink1.UILearnmoreEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="1200" Y="486" />
+      <Location X="20" Y="10" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
     <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod1">
       <ParameterName />
       <StepId>-1</StepId>
@@ -238,7 +229,7 @@
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIMozillaFirefoxStartPWindow" FriendlyName="Mozilla Firefox Start Page - Mozilla Firefox" SpecialControlType="None" SessionId="7472856">
+        <TopLevelWindow ControlType="Window" Id="UIMozillaFirefoxStartPWindow" FriendlyName="Mozilla Firefox Start Page - Mozilla Firefox" SpecialControlType="None" SessionId="6816738">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Mozilla Firefox Start Page - Mozilla Firefox</WindowTitle>
@@ -325,6 +316,37 @@
                 </UIObject>
               </Descendants>
             </UIObject>
+            <UIObject ControlType="Hyperlink" Id="UILearnmoreHyperlink" FriendlyName="Learn more »" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Home Page - My ASP.NET Application - Mozilla Firefox</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Learn more »</PropertyCondition>
+                <PropertyCondition Name="ControlType">Hyperlink</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Edit" Id="UILearnmoreEdit" FriendlyName="Learn more »" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Home Page - My ASP.NET Application - Mozilla Firefox</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Learn more »</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
             <UIObject ControlType="Hyperlink" Id="UILearnHyperlink" FriendlyName="Learn" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
@@ -356,7 +378,7 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Hyperlink" Id="UILearnmoreHyperlink" FriendlyName="Learn more›" SpecialControlType="None">
+            <UIObject ControlType="Hyperlink" Id="UILearnmoreHyperlink1" FriendlyName="Learn more›" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Learn | The ASP.NET Site - Mozilla Firefox</WindowTitle>
@@ -381,84 +403,6 @@
                   <AndCondition Id="SearchCondition">
                     <PropertyCondition Name="Name">Learn more</PropertyCondition>
                     <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Application" Id="UIFreeCoursesTheASPNETApplication" FriendlyName="Free Courses | The ASP.NET Site - Mozilla Firefox" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Free Courses | The ASP.NET Site - Mozilla Firefox</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="Name">Free Courses | The ASP.NET Site - Mozilla Firefox</PropertyCondition>
-                <PropertyCondition Name="ControlType">Application</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="PropertyPage" Id="UIItemPropertyPage" FriendlyName="" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Free Courses | The ASP.NET Site - Mozilla Firefox</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="ControlType">PropertyPage</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIProgramManagerWindow" FriendlyName="Program Manager" SpecialControlType="None" SessionId="65664">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Program Manager</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Program Manager</PropertyCondition>
-            <PropertyCondition Name="ClassName">Progman</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Window" Id="UIFolderViewWindow" FriendlyName="FolderView" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Program Manager</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlId">1</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="List" Id="UIDesktopList" FriendlyName="Desktop" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Program Manager</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Desktop</PropertyCondition>
-                    <PropertyCondition Name="ControlType">List</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
