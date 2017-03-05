@@ -1,9 +1,12 @@
 version: 0.0
 os: windows
 files:
-  - source: https://github.com/nimisha-sharma/NewApp/
-    destination: c:\inetpub\wwwroot
+  - source: \\DEVOPSNIMISHA18\BuildDrop\DEVOPSNIMISHA18\BuildDrop
+  - destination: c:\inetpub\wwwroot
 hooks:
-  ApplicationStart:
-    - location: **/CodedUITestProject1.dll
-      timeout: 3600
+  BeforeInstall:
+   - source: \\DEVOPSNIMISHA18\BuildDrop\DEVOPSNIMISHA18\BuildDrop
+   - destination: C:\BuildDrop
+  AfterInstall:
+    - location: 
+      timeout: 180

@@ -1,0 +1,1 @@
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe /testcontainer:"C:\BuildDrop\NewApp\CodedUITestProject1\obj\Release\CodedUITestProject1.dll"
