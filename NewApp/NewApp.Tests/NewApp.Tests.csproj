@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{41616FE4-2FF2-4C19-A67F-0749A3B9F69D}</ProjectGuid>
+    <ProjectGuid>{59E52572-7333-4DF9-9A12-25530B07D282}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NewApp.Tests</RootNamespace>
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NewApp\NewApp.csproj">
-      <Project>{04D544EC-1A36-4EE5-84BC-0154E72C95A2}</Project>
+      <Project>{39D7DD19-AEC7-4A8E-9FC0-1EEA4240F44E}</Project>
       <Name>NewApp</Name>
     </ProjectReference>
   </ItemGroup>

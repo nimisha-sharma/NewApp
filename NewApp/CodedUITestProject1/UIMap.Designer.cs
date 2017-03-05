@@ -37,35 +37,29 @@ namespace CodedUITestProject1
             #region Variable Declarations
             WinControl uIMozillaFirefoxMenuButton = this.UIRunningapplicationsWindow.UIRunningapplicationsToolBar.UIMozillaFirefoxMenuButton;
             WinMenuItem uIMozillaFirefoxMenuItem = this.UIJumpListWindow.UIItemWindow.UIJumpListClient.UIMozillaFirefoxMenuItem;
-            WinComboBox uIItemComboBox = this.UIMozillaFirefoxStartPWindow.UINavigationToolbarToolBar.UIItemComboBox;
-            WinEdit uIGotoaWebsiteEdit = this.UIMozillaFirefoxStartPWindow.UIItemComboBox.UIGotoaWebsiteEdit;
-            WinEdit uILearnmoreEdit = this.UIMozillaFirefoxStartPWindow.UILearnmoreHyperlink.UILearnmoreEdit;
-            WinEdit uILearnEdit = this.UIMozillaFirefoxStartPWindow.UILearnHyperlink.UILearnEdit;
-            WinEdit uILearnmoreEdit1 = this.UIMozillaFirefoxStartPWindow.UILearnmoreHyperlink1.UILearnmoreEdit;
+            WinEdit uIItemEdit = this.UIMozillaFirefoxStartPWindow.UIMozillaFirefoxStartPDocument.UIItemEdit;
+            WinEdit uISearchEdit = this.UIMozillaFirefoxStartPWindow.UISearchButton.UISearchEdit;
+            WinEdit uIW3SchoolsOnlineWebTuEdit = this.UIMozillaFirefoxStartPWindow.UIW3SchoolsOnlineWebTuHyperlink.UIW3SchoolsOnlineWebTuEdit;
+            WinControl uIItemPropertyPage = this.UIMozillaFirefoxStartPWindow.UIW3SchoolsOnlineWebTuApplication.UIItemPropertyPage;
             #endregion
 
             // Right-Click 'Mozilla Firefox' MenuButton
-            Mouse.Click(uIMozillaFirefoxMenuButton, MouseButtons.Right, ModifierKeys.None, new Point(25, 13));
+            Mouse.Click(uIMozillaFirefoxMenuButton, MouseButtons.Right, ModifierKeys.None, new Point(35, 21));
 
             // Click 'Mozilla Firefox' menu item
-            Mouse.Click(uIMozillaFirefoxMenuItem, new Point(134, 10));
+            Mouse.Click(uIMozillaFirefoxMenuItem, new Point(143, 9));
 
-            // Select 'http://localhost:11259' in combo box
-            uIItemComboBox.EditableItem = this.RecordedMethod1Params.UIItemComboBoxEditableItem;
+            // Type 'w3schools.com' in text box
+            uIItemEdit.Text = this.RecordedMethod1Params.UIItemEditText;
 
-            // Type '{Enter}' in 'Go to a Website' text box
-            Keyboard.SendKeys(uIGotoaWebsiteEdit, this.RecordedMethod1Params.UIGotoaWebsiteEditSendKeys, ModifierKeys.None);
+            // Click 'Search' text box
+            Mouse.Click(uISearchEdit, new Point(31, 12));
 
-            // Click 'Learn more »' text box
-            Mouse.Click(uILearnmoreEdit, new Point(82, 16));
+            // Click 'W3Schools Online Web Tutorials' text box
+            Mouse.Click(uIW3SchoolsOnlineWebTuEdit, new Point(215, 12));
 
-            // Click 'Learn' text box
-            Mouse.Click(uILearnEdit, new Point(16, 12));
-
-            // Click 'Learn more' text box
-            Mouse.Click(uILearnmoreEdit1, new Point(20, 10));
-
-            // Last mouse action was not recorded.
+            // Click PropertyPage
+            Mouse.Click(uIItemPropertyPage, new Point(1351, 15));
         }
         
         #region Properties
@@ -116,6 +110,18 @@ namespace CodedUITestProject1
                 return this.mUIMozillaFirefoxStartPWindow;
             }
         }
+        
+        public UINewApp2Window UINewApp2Window
+        {
+            get
+            {
+                if ((this.mUINewApp2Window == null))
+                {
+                    this.mUINewApp2Window = new UINewApp2Window();
+                }
+                return this.mUINewApp2Window;
+            }
+        }
         #endregion
         
         #region Fields
@@ -126,6 +132,8 @@ namespace CodedUITestProject1
         private UIJumpListWindow mUIJumpListWindow;
         
         private UIMozillaFirefoxStartPWindow mUIMozillaFirefoxStartPWindow;
+        
+        private UINewApp2Window mUINewApp2Window;
         #endregion
     }
     
@@ -138,14 +146,9 @@ namespace CodedUITestProject1
         
         #region Fields
         /// <summary>
-        /// Select 'http://localhost:11259' in combo box
+        /// Type 'w3schools.com' in text box
         /// </summary>
-        public string UIItemComboBoxEditableItem = "http://localhost:11259";
-        
-        /// <summary>
-        /// Type '{Enter}' in 'Go to a Website' text box
-        /// </summary>
-        public string UIGotoaWebsiteEditSendKeys = "{Enter}";
+        public string UIItemEditText = "w3schools.com";
         #endregion
     }
     
@@ -327,271 +330,315 @@ namespace CodedUITestProject1
             this.SearchProperties[WinWindow.PropertyNames.Name] = "Mozilla Firefox Start Page - Mozilla Firefox";
             this.SearchProperties[WinWindow.PropertyNames.ClassName] = "MozillaWindowClass";
             this.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
-            this.WindowTitles.Add("Home Page - My ASP.NET Application - Mozilla Firefox");
-            this.WindowTitles.Add("ASP.NET | The ASP.NET Site - Mozilla Firefox");
-            this.WindowTitles.Add("Learn | The ASP.NET Site - Mozilla Firefox");
-            this.WindowTitles.Add("Free Courses | The ASP.NET Site - Mozilla Firefox");
+            this.WindowTitles.Add("w3schools.com - Google Search - Mozilla Firefox");
+            this.WindowTitles.Add("W3Schools Online Web Tutorials - Mozilla Firefox");
             #endregion
         }
         
         #region Properties
-        public UINavigationToolbarToolBar UINavigationToolbarToolBar
+        public UIMozillaFirefoxStartPDocument UIMozillaFirefoxStartPDocument
         {
             get
             {
-                if ((this.mUINavigationToolbarToolBar == null))
+                if ((this.mUIMozillaFirefoxStartPDocument == null))
                 {
-                    this.mUINavigationToolbarToolBar = new UINavigationToolbarToolBar(this);
+                    this.mUIMozillaFirefoxStartPDocument = new UIMozillaFirefoxStartPDocument(this);
                 }
-                return this.mUINavigationToolbarToolBar;
+                return this.mUIMozillaFirefoxStartPDocument;
             }
         }
         
-        public UIItemComboBox UIItemComboBox
+        public UISearchButton UISearchButton
         {
             get
             {
-                if ((this.mUIItemComboBox == null))
+                if ((this.mUISearchButton == null))
                 {
-                    this.mUIItemComboBox = new UIItemComboBox(this);
+                    this.mUISearchButton = new UISearchButton(this);
                 }
-                return this.mUIItemComboBox;
+                return this.mUISearchButton;
             }
         }
         
-        public UILearnmoreHyperlink UILearnmoreHyperlink
+        public UIW3SchoolsOnlineWebTuHyperlink UIW3SchoolsOnlineWebTuHyperlink
         {
             get
             {
-                if ((this.mUILearnmoreHyperlink == null))
+                if ((this.mUIW3SchoolsOnlineWebTuHyperlink == null))
                 {
-                    this.mUILearnmoreHyperlink = new UILearnmoreHyperlink(this);
+                    this.mUIW3SchoolsOnlineWebTuHyperlink = new UIW3SchoolsOnlineWebTuHyperlink(this);
                 }
-                return this.mUILearnmoreHyperlink;
+                return this.mUIW3SchoolsOnlineWebTuHyperlink;
             }
         }
         
-        public UILearnHyperlink UILearnHyperlink
+        public UIW3SchoolsOnlineWebTuApplication UIW3SchoolsOnlineWebTuApplication
         {
             get
             {
-                if ((this.mUILearnHyperlink == null))
+                if ((this.mUIW3SchoolsOnlineWebTuApplication == null))
                 {
-                    this.mUILearnHyperlink = new UILearnHyperlink(this);
+                    this.mUIW3SchoolsOnlineWebTuApplication = new UIW3SchoolsOnlineWebTuApplication(this);
                 }
-                return this.mUILearnHyperlink;
-            }
-        }
-        
-        public UILearnmoreHyperlink1 UILearnmoreHyperlink1
-        {
-            get
-            {
-                if ((this.mUILearnmoreHyperlink1 == null))
-                {
-                    this.mUILearnmoreHyperlink1 = new UILearnmoreHyperlink1(this);
-                }
-                return this.mUILearnmoreHyperlink1;
+                return this.mUIW3SchoolsOnlineWebTuApplication;
             }
         }
         #endregion
         
         #region Fields
-        private UINavigationToolbarToolBar mUINavigationToolbarToolBar;
+        private UIMozillaFirefoxStartPDocument mUIMozillaFirefoxStartPDocument;
         
-        private UIItemComboBox mUIItemComboBox;
+        private UISearchButton mUISearchButton;
         
-        private UILearnmoreHyperlink mUILearnmoreHyperlink;
+        private UIW3SchoolsOnlineWebTuHyperlink mUIW3SchoolsOnlineWebTuHyperlink;
         
-        private UILearnHyperlink mUILearnHyperlink;
-        
-        private UILearnmoreHyperlink1 mUILearnmoreHyperlink1;
+        private UIW3SchoolsOnlineWebTuApplication mUIW3SchoolsOnlineWebTuApplication;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UINavigationToolbarToolBar : WinToolBar
+    public class UIMozillaFirefoxStartPDocument : WinControl
     {
         
-        public UINavigationToolbarToolBar(UITestControl searchLimitContainer) : 
+        public UIMozillaFirefoxStartPDocument(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinToolBar.PropertyNames.Name] = "Navigation Toolbar";
-            this.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
-            this.WindowTitles.Add("Home Page - My ASP.NET Application - Mozilla Firefox");
-            this.WindowTitles.Add("ASP.NET | The ASP.NET Site - Mozilla Firefox");
-            this.WindowTitles.Add("Learn | The ASP.NET Site - Mozilla Firefox");
-            this.WindowTitles.Add("Free Courses | The ASP.NET Site - Mozilla Firefox");
-            #endregion
-        }
-        
-        #region Properties
-        public WinComboBox UIItemComboBox
-        {
-            get
-            {
-                if ((this.mUIItemComboBox == null))
-                {
-                    this.mUIItemComboBox = new WinComboBox(this);
-                    #region Search Criteria
-                    this.mUIItemComboBox.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
-                    this.mUIItemComboBox.WindowTitles.Add("Home Page - My ASP.NET Application - Mozilla Firefox");
-                    this.mUIItemComboBox.WindowTitles.Add("ASP.NET | The ASP.NET Site - Mozilla Firefox");
-                    this.mUIItemComboBox.WindowTitles.Add("Learn | The ASP.NET Site - Mozilla Firefox");
-                    this.mUIItemComboBox.WindowTitles.Add("Free Courses | The ASP.NET Site - Mozilla Firefox");
-                    #endregion
-                }
-                return this.mUIItemComboBox;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinComboBox mUIItemComboBox;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UIItemComboBox : WinComboBox
-    {
-        
-        public UIItemComboBox(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Mozilla Firefox Start Page";
+            this.SearchProperties[UITestControl.PropertyNames.ControlType] = "Document";
             this.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
             #endregion
         }
         
         #region Properties
-        public WinEdit UIGotoaWebsiteEdit
+        public WinEdit UIItemEdit
         {
             get
             {
-                if ((this.mUIGotoaWebsiteEdit == null))
+                if ((this.mUIItemEdit == null))
                 {
-                    this.mUIGotoaWebsiteEdit = new WinEdit(this);
+                    this.mUIItemEdit = new WinEdit(this);
                     #region Search Criteria
-                    this.mUIGotoaWebsiteEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Go to a Website";
-                    this.mUIGotoaWebsiteEdit.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
+                    this.mUIItemEdit.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
                     #endregion
                 }
-                return this.mUIGotoaWebsiteEdit;
+                return this.mUIItemEdit;
             }
         }
         #endregion
         
         #region Fields
-        private WinEdit mUIGotoaWebsiteEdit;
+        private WinEdit mUIItemEdit;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UILearnmoreHyperlink : WinHyperlink
+    public class UISearchButton : WinButton
     {
         
-        public UILearnmoreHyperlink(UITestControl searchLimitContainer) : 
+        public UISearchButton(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinHyperlink.PropertyNames.Name] = "Learn more »";
-            this.WindowTitles.Add("Home Page - My ASP.NET Application - Mozilla Firefox");
+            this.SearchProperties[WinButton.PropertyNames.Name] = "Search";
+            this.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
             #endregion
         }
         
         #region Properties
-        public WinEdit UILearnmoreEdit
+        public WinEdit UISearchEdit
         {
             get
             {
-                if ((this.mUILearnmoreEdit == null))
+                if ((this.mUISearchEdit == null))
                 {
-                    this.mUILearnmoreEdit = new WinEdit(this);
+                    this.mUISearchEdit = new WinEdit(this);
                     #region Search Criteria
-                    this.mUILearnmoreEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Learn more »";
-                    this.mUILearnmoreEdit.WindowTitles.Add("Home Page - My ASP.NET Application - Mozilla Firefox");
+                    this.mUISearchEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Search";
+                    this.mUISearchEdit.WindowTitles.Add("Mozilla Firefox Start Page - Mozilla Firefox");
                     #endregion
                 }
-                return this.mUILearnmoreEdit;
+                return this.mUISearchEdit;
             }
         }
         #endregion
         
         #region Fields
-        private WinEdit mUILearnmoreEdit;
+        private WinEdit mUISearchEdit;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UILearnHyperlink : WinHyperlink
+    public class UIW3SchoolsOnlineWebTuHyperlink : WinHyperlink
     {
         
-        public UILearnHyperlink(UITestControl searchLimitContainer) : 
+        public UIW3SchoolsOnlineWebTuHyperlink(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinHyperlink.PropertyNames.Name] = "Learn";
-            this.WindowTitles.Add("ASP.NET | The ASP.NET Site - Mozilla Firefox");
+            this.SearchProperties[WinHyperlink.PropertyNames.Name] = "W3Schools Online Web Tutorials";
+            this.WindowTitles.Add("w3schools.com - Google Search - Mozilla Firefox");
             #endregion
         }
         
         #region Properties
-        public WinEdit UILearnEdit
+        public WinEdit UIW3SchoolsOnlineWebTuEdit
         {
             get
             {
-                if ((this.mUILearnEdit == null))
+                if ((this.mUIW3SchoolsOnlineWebTuEdit == null))
                 {
-                    this.mUILearnEdit = new WinEdit(this);
+                    this.mUIW3SchoolsOnlineWebTuEdit = new WinEdit(this);
                     #region Search Criteria
-                    this.mUILearnEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Learn ";
-                    this.mUILearnEdit.WindowTitles.Add("ASP.NET | The ASP.NET Site - Mozilla Firefox");
+                    this.mUIW3SchoolsOnlineWebTuEdit.SearchProperties[WinEdit.PropertyNames.Name] = "W3Schools Online Web Tutorials";
+                    this.mUIW3SchoolsOnlineWebTuEdit.WindowTitles.Add("w3schools.com - Google Search - Mozilla Firefox");
                     #endregion
                 }
-                return this.mUILearnEdit;
+                return this.mUIW3SchoolsOnlineWebTuEdit;
             }
         }
         #endregion
         
         #region Fields
-        private WinEdit mUILearnEdit;
+        private WinEdit mUIW3SchoolsOnlineWebTuEdit;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class UILearnmoreHyperlink1 : WinHyperlink
+    public class UIW3SchoolsOnlineWebTuApplication : WinControl
     {
         
-        public UILearnmoreHyperlink1(UITestControl searchLimitContainer) : 
+        public UIW3SchoolsOnlineWebTuApplication(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WinHyperlink.PropertyNames.Name] = "Learn more›";
-            this.WindowTitles.Add("Learn | The ASP.NET Site - Mozilla Firefox");
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "W3Schools Online Web Tutorials - Mozilla Firefox";
+            this.SearchProperties[UITestControl.PropertyNames.ControlType] = "Application";
+            this.WindowTitles.Add("W3Schools Online Web Tutorials - Mozilla Firefox");
             #endregion
         }
         
         #region Properties
-        public WinEdit UILearnmoreEdit
+        public WinControl UIItemPropertyPage
         {
             get
             {
-                if ((this.mUILearnmoreEdit == null))
+                if ((this.mUIItemPropertyPage == null))
                 {
-                    this.mUILearnmoreEdit = new WinEdit(this);
+                    this.mUIItemPropertyPage = new WinControl(this);
                     #region Search Criteria
-                    this.mUILearnmoreEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Learn more";
-                    this.mUILearnmoreEdit.WindowTitles.Add("Learn | The ASP.NET Site - Mozilla Firefox");
+                    this.mUIItemPropertyPage.SearchProperties[UITestControl.PropertyNames.ControlType] = "PropertyPage";
+                    this.mUIItemPropertyPage.WindowTitles.Add("W3Schools Online Web Tutorials - Mozilla Firefox");
                     #endregion
                 }
-                return this.mUILearnmoreEdit;
+                return this.mUIItemPropertyPage;
             }
         }
         #endregion
         
         #region Fields
-        private WinEdit mUILearnmoreEdit;
+        private WinControl mUIItemPropertyPage;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UINewApp2Window : WinWindow
+    {
+        
+        public UINewApp2Window()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "NewApp2";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "CabinetWClass";
+            this.WindowTitles.Add("NewApp2");
+            #endregion
+        }
+        
+        #region Properties
+        public UIShellViewWindow UIShellViewWindow
+        {
+            get
+            {
+                if ((this.mUIShellViewWindow == null))
+                {
+                    this.mUIShellViewWindow = new UIShellViewWindow(this);
+                }
+                return this.mUIShellViewWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIShellViewWindow mUIShellViewWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIShellViewWindow : WinWindow
+    {
+        
+        public UIShellViewWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "ShellView";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "SHELLDLL_DefView";
+            this.WindowTitles.Add("NewApp2");
+            #endregion
+        }
+        
+        #region Properties
+        public UIShellViewClient UIShellViewClient
+        {
+            get
+            {
+                if ((this.mUIShellViewClient == null))
+                {
+                    this.mUIShellViewClient = new UIShellViewClient(this);
+                }
+                return this.mUIShellViewClient;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIShellViewClient mUIShellViewClient;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIShellViewClient : WinClient
+    {
+        
+        public UIShellViewClient(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinControl.PropertyNames.Name] = "Shell Folder View";
+            this.WindowTitles.Add("NewApp2");
+            #endregion
+        }
+        
+        #region Properties
+        public WinList UIItemsViewList
+        {
+            get
+            {
+                if ((this.mUIItemsViewList == null))
+                {
+                    this.mUIItemsViewList = new WinList(this);
+                    #region Search Criteria
+                    this.mUIItemsViewList.SearchProperties[WinList.PropertyNames.Name] = "Items View";
+                    this.mUIItemsViewList.WindowTitles.Add("NewApp2");
+                    #endregion
+                }
+                return this.mUIItemsViewList;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinList mUIItemsViewList;
         #endregion
     }
 }
