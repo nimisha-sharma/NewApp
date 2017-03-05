@@ -1,5 +1,0 @@
-C:\Git-Repo_NewApp\NewApp\CodedUITestProject1\bin\Debug\CodedUITestProject1.dll
-C:\Git-Repo_NewApp\NewApp\CodedUITestProject1\bin\Debug\CodedUITestProject1.pdb
-C:\Git-Repo_NewApp\NewApp\CodedUITestProject1\obj\Debug\CodedUITestProject1.csprojResolveAssemblyReference.cache
-C:\Git-Repo_NewApp\NewApp\CodedUITestProject1\obj\Debug\CodedUITestProject1.dll
-C:\Git-Repo_NewApp\NewApp\CodedUITestProject1\obj\Debug\CodedUITestProject1.pdb

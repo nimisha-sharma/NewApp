@@ -77,6 +77,6 @@ C:\Git-Repo_NewApp\NewApp\NewApp\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Git-Repo_NewApp\NewApp\NewApp\bin\Microsoft.Owin.Security.Google.xml
 C:\Git-Repo_NewApp\NewApp\NewApp\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Git-Repo_NewApp\NewApp\NewApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Git-Repo_NewApp\NewApp\NewApp\obj\Debug\NewApp.csprojResolveAssemblyReference.cache
-C:\Git-Repo_NewApp\NewApp\NewApp\obj\Debug\NewApp.dll
-C:\Git-Repo_NewApp\NewApp\NewApp\obj\Debug\NewApp.pdb
+C:\Git-Repo_NewApp\NewApp\NewApp\obj\Release\NewApp.csprojResolveAssemblyReference.cache
+C:\Git-Repo_NewApp\NewApp\NewApp\obj\Release\NewApp.dll
+C:\Git-Repo_NewApp\NewApp\NewApp\obj\Release\NewApp.pdb
