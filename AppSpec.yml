@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: \\DEVOPSNIMISHA18\BuildDrop\DEVOPSNIMISHA18\BuildDrop
+  - destination: c:\inetpub\wwwroot
+hooks:
+  BeforeInstall:
+   - source: \\DEVOPSNIMISHA18\BuildDrop\DEVOPSNIMISHA18\BuildDrop
+   - destination: C:\BuildDrop
+  AfterInstall:
+    - location: 
+      timeout: 180
